@@ -9,5 +9,5 @@
   - [linked](https://github.com/woodycatliu/Swift_Combine_Challenge/blob/main/Timer%26Operation/Timer%26Operation/Table%20of%20Contents/Chapter1/View/TimestampView.swift)
 
 **StopWatchMaterial**
-- dateFormater: stopWatchDateFormater[linked](https://github.com/woodycatliu/Swift_Combine_Challenge/blob/main/Timer%26Operation/Timer%26Operation/Table%20of%20Contents/Chapter1/Material/DateFormater.swift)
+- dateFormater: stopWatchDateFormater [linked](https://github.com/woodycatliu/Swift_Combine_Challenge/blob/main/Timer%26Operation/Timer%26Operation/Table%20of%20Contents/Chapter1/Material/DateFormater.swift)
 - ButtonStyle: [linked](https://github.com/woodycatliu/Swift_Combine_Challenge/blob/main/Timer%26Operation/Timer%26Operation/Table%20of%20Contents/Chapter1/Material/ButtonStyle.swift)
