@@ -161,7 +161,8 @@
 				EFD432BF27B0C47600A40393 /* View */,
 				EFD432BD27B0C40000A40393 /* Chapter_1_ReadMe.md */,
 			);
-			path = Chatper1;
+			name = Chatper1;
+			path = Chapter1;
 			sourceTree = "<group>";
 		};
 		EFD432BF27B0C47600A40393 /* View */ = {
