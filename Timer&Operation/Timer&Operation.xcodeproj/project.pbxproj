@@ -24,6 +24,7 @@
 		EFD432CD27B0EB4800A40393 /* StopWatchMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD432CC27B0EB4800A40393 /* StopWatchMaterial.swift */; };
 		EFD432CF27B0EBA600A40393 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD432CE27B0EBA600A40393 /* ButtonStyle.swift */; };
 		EFD432D127B0ED9F00A40393 /* ScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD432D027B0ED9F00A40393 /* ScreenExtension.swift */; };
+		EFD432D527B0FF3100A40393 /* ReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = EFD432D427B0FF3100A40393 /* ReadMe.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		EFD432CC27B0EB4800A40393 /* StopWatchMaterial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchMaterial.swift; sourceTree = "<group>"; };
 		EFD432CE27B0EBA600A40393 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		EFD432D027B0ED9F00A40393 /* ScreenExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenExtension.swift; sourceTree = "<group>"; };
+		EFD432D427B0FF3100A40393 /* ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 		EFD4328A27B0C2CD00A40393 /* Timer&Operation */ = {
 			isa = PBXGroup;
 			children = (
+				EFD432D327B0FEE900A40393 /* Implement */,
 				EFD432C227B0C6D400A40393 /* Extension */,
 				EFD432BB27B0C33800A40393 /* Table of Contents */,
 				EFD4328B27B0C2CD00A40393 /* AppDelegate.swift */,
@@ -124,6 +127,7 @@
 				EFD4329427B0C2CE00A40393 /* Assets.xcassets */,
 				EFD4329627B0C2CE00A40393 /* LaunchScreen.storyboard */,
 				EFD4329927B0C2CE00A40393 /* Info.plist */,
+				EFD432D427B0FF3100A40393 /* ReadMe.md */,
 			);
 			path = "Timer&Operation";
 			sourceTree = "<group>";
@@ -198,6 +202,13 @@
 				EFD432CE27B0EBA600A40393 /* ButtonStyle.swift */,
 			);
 			path = Material;
+			sourceTree = "<group>";
+		};
+		EFD432D327B0FEE900A40393 /* Implement */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Implement;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +319,7 @@
 				EFD4329527B0C2CE00A40393 /* Assets.xcassets in Resources */,
 				EFD432BE27B0C40000A40393 /* Chapter_1_ReadMe.md in Resources */,
 				EFD4329327B0C2CD00A40393 /* Main.storyboard in Resources */,
+				EFD432D527B0FF3100A40393 /* ReadMe.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
