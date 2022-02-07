@@ -6,3 +6,8 @@ Combine practical exercises
 - 每一個題型內可能會有分數個章節，請試著完成該章節課題。
 - 參加計畫者請自行 Clone 並且開一個自己名稱的 Branch
 - 完成課題請發MR，所有參加者互相討論
+
+
+目錄 - 
+
+1. Timer&Operation: Timer.Combine 實作練習
