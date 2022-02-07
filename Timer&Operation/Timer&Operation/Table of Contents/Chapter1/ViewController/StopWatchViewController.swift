@@ -6,10 +6,12 @@
 //
 
 import UIKit
+class ViewController: UIViewController {
 
-class StopWatchViewController: UIViewController {
-    let button: UIButton = UIButton()
-    let timestampView: TimestampView = TimestampView()
+//class StopWatchViewController: UIViewController {
+    private let playBtn: UIButton = UIButton()
+    private let resetBtn: UIButton = UIButton()
+    private let timestampView: TimestampView = TimestampView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,17 +31,21 @@ class StopWatchViewController: UIViewController {
             layguid.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             layguid.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
-        view.addSubview(button)
-        button.centerXTo(layguid.centerXAnchor)
-        button.centerYTo(layguid.centerYAnchor)
+        view.addSubview(playBtn)
+        playBtn.centerXTo(layguid.centerXAnchor)
+        playBtn.centerYTo(layguid.centerYAnchor)
+        
+        view.addSubview(resetBtn)
+        resetBtn.centerXTo(layguid.centerXAnchor)
+        resetBtn.anchor(top: nil, leading: nil, bottom: layguid.bottomAnchor, trailing: nil)
     }
     
     private func configureButton() {
-        button.withSize(.init(width: 80, height: 35))
-        button.backgroundColor = StopWatchMaterial.ButtonStyle.backgroundColor
-        button.setTitle(StopWatchMaterial.ButtonStyle.Start.title, for: .normal)
-        button.setTitleColor(StopWatchMaterial.ButtonStyle.Start.titleColor, for: .normal)
-        button.setTitleColor(StopWatchMaterial.ButtonStyle.Start.highlightedColor, for: .highlighted)
+        StopWatchMaterial.ButtonStyle.PlayBtn.setButton(playBtn)
+        StopWatchMaterial.ButtonStyle.PlayBtn.Start.setButton(playBtn)
+        
+        StopWatchMaterial.ButtonStyle.ResetBtn.setButton(resetBtn)
+        StopWatchMaterial.ButtonStyle.ResetBtn.Reset.setButton(resetBtn)
     }
 }
 

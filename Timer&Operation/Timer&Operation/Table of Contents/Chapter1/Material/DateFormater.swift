@@ -7,6 +7,6 @@
 
 import Foundation
 extension StopWatchMaterial {
-    static let stopWatchDateFormater: String = "mm:ss:SS"
+    static let stopWatchDateFormater: String = "mm:ss.SS"
 }
 

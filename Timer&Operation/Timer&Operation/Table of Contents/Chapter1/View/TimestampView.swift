@@ -29,7 +29,7 @@ class TimestampView: UIView {
     }()
     
     @Published
-    var text: String? = "00:00:00"
+    var text: String? = "00:00.00"
     
     override init(frame: CGRect) {
         super.init(frame: frame)
