@@ -25,6 +25,7 @@
 		EFD432CF27B0EBA600A40393 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD432CE27B0EBA600A40393 /* ButtonStyle.swift */; };
 		EFD432D127B0ED9F00A40393 /* ScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD432D027B0ED9F00A40393 /* ScreenExtension.swift */; };
 		EFD432D527B0FF3100A40393 /* ReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = EFD432D427B0FF3100A40393 /* ReadMe.md */; };
+		EFD432D727B1035C00A40393 /* Implement_ReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = EFD432D627B1035C00A40393 /* Implement_ReadMe.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		EFD432CE27B0EBA600A40393 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		EFD432D027B0ED9F00A40393 /* ScreenExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenExtension.swift; sourceTree = "<group>"; };
 		EFD432D427B0FF3100A40393 /* ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
+		EFD432D627B1035C00A40393 /* Implement_ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Implement_ReadMe.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +209,7 @@
 		EFD432D327B0FEE900A40393 /* Implement */ = {
 			isa = PBXGroup;
 			children = (
+				EFD432D627B1035C00A40393 /* Implement_ReadMe.md */,
 			);
 			path = Implement;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFD432D727B1035C00A40393 /* Implement_ReadMe.md in Resources */,
 				EFD4329827B0C2CE00A40393 /* LaunchScreen.storyboard in Resources */,
 				EFD4329527B0C2CE00A40393 /* Assets.xcassets in Resources */,
 				EFD432BE27B0C40000A40393 /* Chapter_1_ReadMe.md in Resources */,
