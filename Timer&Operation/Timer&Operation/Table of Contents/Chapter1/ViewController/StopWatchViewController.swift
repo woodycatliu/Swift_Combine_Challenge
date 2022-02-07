@@ -6,9 +6,8 @@
 //
 
 import UIKit
-class ViewController: UIViewController {
 
-//class StopWatchViewController: UIViewController {
+class StopWatchViewController: UIViewController {
     private let playBtn: UIButton = UIButton()
     private let resetBtn: UIButton = UIButton()
     private let timestampView: TimestampView = TimestampView()
