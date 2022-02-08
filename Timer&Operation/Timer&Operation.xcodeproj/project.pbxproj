@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EFA0D61F27B22F5800E7BC8C /* Chapter_2_ReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = EFA0D61E27B22F5800E7BC8C /* Chapter_2_ReadMe.md */; };
 		EFD4328C27B0C2CD00A40393 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4328B27B0C2CD00A40393 /* AppDelegate.swift */; };
 		EFD4328E27B0C2CD00A40393 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4328D27B0C2CD00A40393 /* SceneDelegate.swift */; };
 		EFD4329027B0C2CD00A40393 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4328F27B0C2CD00A40393 /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EFA0D61E27B22F5800E7BC8C /* Chapter_2_ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Chapter_2_ReadMe.md; sourceTree = "<group>"; };
 		EFD4328827B0C2CD00A40393 /* Timer&Operation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Timer&Operation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFD4328B27B0C2CD00A40393 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFD4328D27B0C2CD00A40393 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EFA0D61C27B205F200E7BC8C /* Chapter2 */ = {
+			isa = PBXGroup;
+			children = (
+				EFA0D61D27B22F3A00E7BC8C /* ViewController */,
+				EFA0D61E27B22F5800E7BC8C /* Chapter_2_ReadMe.md */,
+			);
+			path = Chapter2;
+			sourceTree = "<group>";
+		};
+		EFA0D61D27B22F3A00E7BC8C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		EFD4327F27B0C2CD00A40393 = {
 			isa = PBXGroup;
 			children = (
@@ -154,12 +172,13 @@
 		EFD432BB27B0C33800A40393 /* Table of Contents */ = {
 			isa = PBXGroup;
 			children = (
-				EFD432BC27B0C39500A40393 /* Chatper1 */,
+				EFA0D61C27B205F200E7BC8C /* Chapter2 */,
+				EFD432BC27B0C39500A40393 /* Chapter1 */,
 			);
 			path = "Table of Contents";
 			sourceTree = "<group>";
 		};
-		EFD432BC27B0C39500A40393 /* Chatper1 */ = {
+		EFD432BC27B0C39500A40393 /* Chapter1 */ = {
 			isa = PBXGroup;
 			children = (
 				EFD432C927B0E64F00A40393 /* Material */,
@@ -167,7 +186,6 @@
 				EFD432BF27B0C47600A40393 /* View */,
 				EFD432BD27B0C40000A40393 /* Chapter_1_ReadMe.md */,
 			);
-			name = Chatper1;
 			path = Chapter1;
 			sourceTree = "<group>";
 		};
@@ -319,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFD432D727B1035C00A40393 /* Implement_ReadMe.md in Resources */,
+				EFA0D61F27B22F5800E7BC8C /* Chapter_2_ReadMe.md in Resources */,
 				EFD4329827B0C2CE00A40393 /* LaunchScreen.storyboard in Resources */,
 				EFD4329527B0C2CE00A40393 /* Assets.xcassets in Resources */,
 				EFD432BE27B0C40000A40393 /* Chapter_1_ReadMe.md in Resources */,
