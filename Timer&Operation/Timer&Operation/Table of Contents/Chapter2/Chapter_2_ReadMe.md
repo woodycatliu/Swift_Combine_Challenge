@@ -2,8 +2,8 @@
 
 ##### Create a timing device like the ios clock app.
 
-> 完成定時頁面如同時鐘 app
-> 開始時顯示倒數畫面，請參考時鐘 app
+> 完成定時頁面如同時鐘 app     
+> 點擊開始時顯示倒數畫面，請參考時鐘 app
 
 > datePicker: 時間選擇   
 > timingCountdownView: 倒數計畫面   
