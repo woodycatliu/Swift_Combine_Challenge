@@ -13,6 +13,6 @@
 > 專注在定時時間的 Combine 資料流與事件流的轉換
 > 可參考 Combine.Operator: scan, map, filter 等
 
-- |倒數計時|: timingCountdownView [(TimingCountdownView)]()
+- |倒數計時|: timingCountdownView [(TimingCountdownView)](https://github.com/woodycatliu/Swift_Combine_Challenge/blob/main/Timer%26Operation/Timer%26Operation/Table%20of%20Contents/Chapter2/View/TimingCountdownView.swift)
 - |開始/繼續/暫停|: playBtn [(ConcentricCircleStyleButton)]()
 - |取消|: cancelBtn [(ConcentricCircleStyleButton)]()
