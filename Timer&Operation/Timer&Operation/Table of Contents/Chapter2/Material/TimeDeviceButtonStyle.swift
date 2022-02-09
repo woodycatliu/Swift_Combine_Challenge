@@ -8,20 +8,28 @@
 import Foundation
 import UIKit
 
-class TimingDeviceStyle {
+extension TimeDeviceMaterial {
     struct ButtonStyle {
         struct StartButton {
-            static let backgroundColor: UIColor = .green.withAlphaComponent(0.9)
-            static let highlightlyBackgrounColor: UIColor = .green.withAlphaComponent(0.3)
+            static let backgroundColor: UIColor = .green.withAlphaComponent(0.15)
+            static let highlightlyBackgrounColor: UIColor = .green.withAlphaComponent(0.1)
             static let title: String = "開始"
-            static let titleColor: UIColor = .green
+            static let titleColor: UIColor = .green.withAlphaComponent(0.7)
         }
         
         struct ContinueButton {
-            static let backgroundColor: UIColor = .green.withAlphaComponent(0.9)
-            static let highlightlyBackgrounColor: UIColor = .green.withAlphaComponent(0.3)
+            static let backgroundColor: UIColor = .green.withAlphaComponent(0.15)
+            static let highlightlyBackgrounColor: UIColor = .green.withAlphaComponent(0.1)
             static let title: String = "繼續"
-            static let titleColor: UIColor = .green
+            static let titleColor: UIColor = .green.withAlphaComponent(0.7)
+        }
+        
+        struct StopButton {
+            private static let orange: UIColor = .init(red: 255/255, green: 148/255, blue: 16/255, alpha: 1)
+            static let backgroundColor: UIColor = Self.orange.withAlphaComponent(0.15)
+            static let highlightlyBackgrounColor: UIColor = Self.orange.withAlphaComponent(0.1)
+            static let title: String = "暫停"
+            static let titleColor: UIColor = .orange
         }
         
         struct CancelButton {
@@ -31,8 +39,5 @@ class TimingDeviceStyle {
             static let titleColor: UIColor = .white
             static let disableTitleColor: UIColor = .systemGray3
         }
-        
-        
-        
     }
 }

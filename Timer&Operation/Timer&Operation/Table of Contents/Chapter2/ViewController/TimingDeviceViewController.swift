@@ -8,9 +8,9 @@
 import UIKit
 
 class TimingDeviceViewController: UIViewController {
-    typealias CancelStyle = TimingDeviceStyle.ButtonStyle.CancelButton
-    typealias StartStyle = TimingDeviceStyle.ButtonStyle.StartButton
-    typealias ContinueStyle = TimingDeviceStyle.ButtonStyle.ContinueButton
+    typealias CancelStyle = TimeDeviceMaterial.ButtonStyle.CancelButton
+    typealias StartStyle = TimeDeviceMaterial.ButtonStyle.StartButton
+    typealias ContinueStyle = TimeDeviceMaterial.ButtonStyle.ContinueButton
     
     private let viewModel: TimingDeviceViewModel = TimingDeviceViewModel()
     
@@ -19,6 +19,24 @@ class TimingDeviceViewController: UIViewController {
         dp.delegate = self
         dp.dataSource = self
         return dp
+    }()
+    
+    private lazy var countdownViewContainer: UIView = {
+        let cv = UIView()
+        cv.isHidden = false
+        cv.addSubview(timingCountdownView)
+        cv.backgroundColor = .clear
+        timingCountdownView.anchor(top: cv.topAnchor, leading: cv.leadingAnchor, bottom: nil, trailing: cv.trailingAnchor, padding: .init(top: 15, left: 18, bottom: 0, right: 18))
+        timingCountdownView.heightAnchor.constraint(equalTo: timingCountdownView.widthAnchor).isActive = true
+        return cv
+    }()
+    
+    private lazy var timingCountdownView: TimingCountdownView = {
+        let cv = TimingCountdownView()
+        cv.backgroundColor = .clear
+        cv.maxTimeInterval(10)
+            .setCurrentTiming(0)
+        return cv
     }()
     
     private let cancelBtn: ConcentricCircleStyleButton = {
@@ -63,34 +81,53 @@ class TimingDeviceViewController: UIViewController {
             topGuid.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             topGuid.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             topGuid.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            topGuid.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 2 / 5)
+            topGuid.heightAnchor.constraint(equalTo: view.widthAnchor , multiplier: 1.05)
         ])
         
         view.addSubview(datePicker)
         datePicker.anchor(top: nil, leading: topGuid.leadingAnchor, bottom: nil, trailing: topGuid.trailingAnchor, padding: .init(top: 0, left: UIScreen.width / 9, bottom: 0, right: UIScreen.width / 9))
-        datePicker.centerYTo(topGuid.centerYAnchor)
+        datePicker.centerYTo(topGuid.centerYAnchor, constant: -30)
         datePicker.heightAnchor.constraint(equalTo: datePicker.widthAnchor, multiplier: 2/3).isActive = true
         
+        view.addSubview(countdownViewContainer)
+        countdownViewContainer.anchor(top: topGuid.topAnchor, leading: topGuid.leadingAnchor, bottom: topGuid.bottomAnchor, trailing: topGuid.trailingAnchor)
+        
         view.addSubview(cancelBtn)
-        cancelBtn.anchor(top: topGuid.bottomAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 0, left: 15, bottom: 0, right: 0) , size: .init(width: 67, height: 67))
+        cancelBtn.anchor(top: nil, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: topGuid.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 10, bottom: 0, right: 0) , size: .init(width: 70, height: 70))
+        
+        
+        view.addSubview(playBtn)
+        playBtn.anchor(top: nil, leading: nil, bottom: topGuid.bottomAnchor, trailing: topGuid.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 10), size: .init(width: 70, height: 70))
+        
+        let sublabel = UILabel()
+        view.addSubview(sublabel)
+        sublabel.backgroundColor = .systemGray.withAlphaComponent(0.15)
+        sublabel.layer.cornerRadius = 5
+        sublabel.layer.masksToBounds = true
+        sublabel.textColor = .white.withAlphaComponent(0.8)
+        sublabel.adjustsFontSizeToFitWidth = true
+        sublabel.text = "    假裝我是鈴聲選擇"
+        sublabel.anchor(top: topGuid.bottomAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 20, left: 10, bottom: 0, right: 10), size: .init(width: 0, height: 50))
+        
     }
     
     fileprivate func configureTimeStampLabel() {
         let rowWidth = (datePicker.bounds.width) / 3
         let hrLabel = pickLabel(text: "小時")
-        view.addSubview(hrLabel)
+        datePicker.addSubview(hrLabel)
         hrLabel.centerYTo(datePicker.centerYAnchor)
         hrLabel.leadingAnchor.constraint(equalTo: datePicker.leadingAnchor, constant: 60).isActive = true
         let minLabel = pickLabel(text: "分鐘")
-        view.addSubview(minLabel)
+        datePicker.addSubview(minLabel)
         minLabel.centerYTo(datePicker.centerYAnchor)
         minLabel.centerXTo(datePicker.leadingAnchor, constant: rowWidth *  7 / 4)
         
         let secLabel = pickLabel(text: "秒")
-        view.addSubview(secLabel)
+        datePicker.addSubview(secLabel)
         secLabel.centerYTo(datePicker.centerYAnchor)
         secLabel.leadingAnchor.constraint(equalTo: datePicker.leadingAnchor, constant: rowWidth *  10 / 4 + 6).isActive = true
     }
+    
 
 }
 
