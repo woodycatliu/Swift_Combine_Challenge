@@ -24,8 +24,8 @@ class TimingDeviceViewController: UIViewController {
     private lazy var countdownViewContainer: UIView = {
         let cv = UIView()
         cv.isHidden = false
+        cv.backgroundColor = view.backgroundColor
         cv.addSubview(timingCountdownView)
-        cv.backgroundColor = .clear
         timingCountdownView.anchor(top: cv.topAnchor, leading: cv.leadingAnchor, bottom: nil, trailing: cv.trailingAnchor, padding: .init(top: 15, left: 18, bottom: 0, right: 18))
         timingCountdownView.heightAnchor.constraint(equalTo: timingCountdownView.widthAnchor).isActive = true
         return cv
@@ -33,7 +33,6 @@ class TimingDeviceViewController: UIViewController {
     
     private lazy var timingCountdownView: TimingCountdownView = {
         let cv = TimingCountdownView()
-        cv.backgroundColor = .clear
         cv.maxTimeInterval(10)
             .setCurrentTiming(0)
         return cv
