@@ -40,7 +40,6 @@ class TimingCountdownView: UIView {
         ctx.clear(bounds)
         ctx.saveGState()
         drawCircle(ctx)
-        ctx.strokePath()
         ctx.restoreGState()
         drawTimestamp()
 
@@ -59,6 +58,7 @@ class TimingCountdownView: UIView {
         let diff = currentTiming / maxTimeInterval * .pi * 2
         ctx.addArc(center: bounds.center, radius: radius, startAngle: 3 / 2 * .pi - diff, endAngle: -.pi / 2 - 0.0000001 * .pi, clockwise: true)
         lineColor.setStroke()
+        ctx.strokePath()
     }
     
     private func drawTimestamp() {
