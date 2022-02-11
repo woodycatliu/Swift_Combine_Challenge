@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EF3AB41327B4DBDE00BE46D3 /* UIViewPreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3AB41227B4DBDE00BE46D3 /* UIViewPreviewProvider.swift */; };
+		EF3AB41327B4DBDE00BE46D3 /* ViewPreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3AB41227B4DBDE00BE46D3 /* ViewPreviewProvider.swift */; };
 		EFA0D61F27B22F5800E7BC8C /* Chapter_2_ReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = EFA0D61E27B22F5800E7BC8C /* Chapter_2_ReadMe.md */; };
 		EFA0D62127B231AD00E7BC8C /* TimingDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA0D62027B231AD00E7BC8C /* TimingDeviceViewController.swift */; };
 		EFA0D62427B2344400E7BC8C /* TimePickViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA0D62327B2344400E7BC8C /* TimePickViewModel.swift */; };
@@ -18,7 +18,12 @@
 		EFA0D63027B3998400E7BC8C /* TimingCountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA0D62F27B3998400E7BC8C /* TimingCountdownView.swift */; };
 		EFA0D63227B3AB6D00E7BC8C /* TimeDeviceMaterial .swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA0D63127B3AB6D00E7BC8C /* TimeDeviceMaterial .swift */; };
 		EFA0D63427B3AB9500E7BC8C /* TimeDeviceDateFormater.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA0D63327B3AB9500E7BC8C /* TimeDeviceDateFormater.swift */; };
-		EFCF210027B4FF1700427696 /* UIViewControllerPreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCF20FF27B4FF1700427696 /* UIViewControllerPreviewProvider.swift */; };
+		EFCF210027B4FF1700427696 /* ViewControllerPreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCF20FF27B4FF1700427696 /* ViewControllerPreviewProvider.swift */; };
+		EFCF210227B5F21100427696 /* ViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCF210127B5F21100427696 /* ViewProvider.swift */; };
+		EFCF210427B5F24000427696 /* ViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCF210327B5F24000427696 /* ViewRepresentable.swift */; };
+		EFCF210627B5F29100427696 /* ViewControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCF210527B5F29100427696 /* ViewControllerProvider.swift */; };
+		EFCF210827B5F2B400427696 /* ViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCF210727B5F2B400427696 /* ViewControllerRepresentable.swift */; };
+		EFCF210B27B5F31200427696 /* UIKitProviderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCF210A27B5F31200427696 /* UIKitProviderLayout.swift */; };
 		EFD4328C27B0C2CD00A40393 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4328B27B0C2CD00A40393 /* AppDelegate.swift */; };
 		EFD4328E27B0C2CD00A40393 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4328D27B0C2CD00A40393 /* SceneDelegate.swift */; };
 		EFD4329027B0C2CD00A40393 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4328F27B0C2CD00A40393 /* ViewController.swift */; };
@@ -58,7 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EF3AB41227B4DBDE00BE46D3 /* UIViewPreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewPreviewProvider.swift; sourceTree = "<group>"; };
+		EF3AB41227B4DBDE00BE46D3 /* ViewPreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPreviewProvider.swift; sourceTree = "<group>"; };
 		EFA0D61E27B22F5800E7BC8C /* Chapter_2_ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Chapter_2_ReadMe.md; sourceTree = "<group>"; };
 		EFA0D62027B231AD00E7BC8C /* TimingDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimingDeviceViewController.swift; sourceTree = "<group>"; };
 		EFA0D62327B2344400E7BC8C /* TimePickViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickViewModel.swift; sourceTree = "<group>"; };
@@ -69,7 +74,12 @@
 		EFA0D62F27B3998400E7BC8C /* TimingCountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimingCountdownView.swift; sourceTree = "<group>"; };
 		EFA0D63127B3AB6D00E7BC8C /* TimeDeviceMaterial .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeDeviceMaterial .swift"; sourceTree = "<group>"; };
 		EFA0D63327B3AB9500E7BC8C /* TimeDeviceDateFormater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeDeviceDateFormater.swift; sourceTree = "<group>"; };
-		EFCF20FF27B4FF1700427696 /* UIViewControllerPreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerPreviewProvider.swift; sourceTree = "<group>"; };
+		EFCF20FF27B4FF1700427696 /* ViewControllerPreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPreviewProvider.swift; sourceTree = "<group>"; };
+		EFCF210127B5F21100427696 /* ViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProvider.swift; sourceTree = "<group>"; };
+		EFCF210327B5F24000427696 /* ViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRepresentable.swift; sourceTree = "<group>"; };
+		EFCF210527B5F29100427696 /* ViewControllerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProvider.swift; sourceTree = "<group>"; };
+		EFCF210727B5F2B400427696 /* ViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRepresentable.swift; sourceTree = "<group>"; };
+		EFCF210A27B5F31200427696 /* UIKitProviderLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitProviderLayout.swift; sourceTree = "<group>"; };
 		EFD4328827B0C2CD00A40393 /* Timer&Operation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Timer&Operation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFD4328B27B0C2CD00A40393 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFD4328D27B0C2CD00A40393 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +135,7 @@
 			children = (
 				EF3AB41127B4DBA400BE46D3 /* ViewController */,
 				EF3AB41027B4DB9F00BE46D3 /* View */,
+				EFCF210A27B5F31200427696 /* UIKitProviderLayout.swift */,
 			);
 			path = UIKit_PreviewProvider;
 			sourceTree = "<group>";
@@ -132,7 +143,9 @@
 		EF3AB41027B4DB9F00BE46D3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EF3AB41227B4DBDE00BE46D3 /* UIViewPreviewProvider.swift */,
+				EF3AB41227B4DBDE00BE46D3 /* ViewPreviewProvider.swift */,
+				EFCF210127B5F21100427696 /* ViewProvider.swift */,
+				EFCF210327B5F24000427696 /* ViewRepresentable.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -140,7 +153,9 @@
 		EF3AB41127B4DBA400BE46D3 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				EFCF20FF27B4FF1700427696 /* UIViewControllerPreviewProvider.swift */,
+				EFCF20FF27B4FF1700427696 /* ViewControllerPreviewProvider.swift */,
+				EFCF210527B5F29100427696 /* ViewControllerProvider.swift */,
+				EFCF210727B5F2B400427696 /* ViewControllerRepresentable.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -450,13 +465,17 @@
 			files = (
 				EFA0D62127B231AD00E7BC8C /* TimingDeviceViewController.swift in Sources */,
 				EFD432C427B0C77F00A40393 /* UIViewConstraintExtension.swift in Sources */,
+				EFCF210827B5F2B400427696 /* ViewControllerRepresentable.swift in Sources */,
 				EFD4329027B0C2CD00A40393 /* ViewController.swift in Sources */,
 				EFD432C127B0C4B000A40393 /* TimestampView.swift in Sources */,
 				EFD432CB27B0E69600A40393 /* StopWatchDateFormater.swift in Sources */,
 				EFD4328C27B0C2CD00A40393 /* AppDelegate.swift in Sources */,
 				EFD432D127B0ED9F00A40393 /* ScreenExtension.swift in Sources */,
-				EFCF210027B4FF1700427696 /* UIViewControllerPreviewProvider.swift in Sources */,
+				EFCF210227B5F21100427696 /* ViewProvider.swift in Sources */,
+				EFCF210027B4FF1700427696 /* ViewControllerPreviewProvider.swift in Sources */,
+				EFCF210627B5F29100427696 /* ViewControllerProvider.swift in Sources */,
 				EFA0D62B27B2733700E7BC8C /* ConcentricCircleStyleButton.swift in Sources */,
+				EFCF210427B5F24000427696 /* ViewRepresentable.swift in Sources */,
 				EFA0D63227B3AB6D00E7BC8C /* TimeDeviceMaterial .swift in Sources */,
 				EFA0D63427B3AB9500E7BC8C /* TimeDeviceDateFormater.swift in Sources */,
 				EFD432CD27B0EB4800A40393 /* StopWatchMaterial.swift in Sources */,
@@ -465,10 +484,11 @@
 				EFA0D62827B26A7800E7BC8C /* UIImageExtension.swift in Sources */,
 				EFA0D62427B2344400E7BC8C /* TimePickViewModel.swift in Sources */,
 				EFD432CF27B0EBA600A40393 /* StopWatchButtonStyle.swift in Sources */,
-				EF3AB41327B4DBDE00BE46D3 /* UIViewPreviewProvider.swift in Sources */,
+				EF3AB41327B4DBDE00BE46D3 /* ViewPreviewProvider.swift in Sources */,
 				EFA0D63027B3998400E7BC8C /* TimingCountdownView.swift in Sources */,
 				EFD432C827B0E5E900A40393 /* StopWatchViewController.swift in Sources */,
 				EFD4328E27B0C2CD00A40393 /* SceneDelegate.swift in Sources */,
+				EFCF210B27B5F31200427696 /* UIKitProviderLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
