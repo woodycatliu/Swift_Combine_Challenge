@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5BBD51A627B8A0020002B93A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBD51A527B8A0020002B93A /* TabBarController.swift */; };
+		5BBD51A827B8A6BB0002B93A /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBD51A727B8A6BB0002B93A /* Logger.swift */; };
 		EF3AB41327B4DBDE00BE46D3 /* ViewPreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3AB41227B4DBDE00BE46D3 /* ViewPreviewProvider.swift */; };
 		EFA0D61F27B22F5800E7BC8C /* Chapter_2_ReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = EFA0D61E27B22F5800E7BC8C /* Chapter_2_ReadMe.md */; };
 		EFA0D62127B231AD00E7BC8C /* TimingDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA0D62027B231AD00E7BC8C /* TimingDeviceViewController.swift */; };
@@ -63,6 +65,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5BBD51A527B8A0020002B93A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		5BBD51A727B8A6BB0002B93A /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		EF3AB41227B4DBDE00BE46D3 /* ViewPreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPreviewProvider.swift; sourceTree = "<group>"; };
 		EFA0D61E27B22F5800E7BC8C /* Chapter_2_ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Chapter_2_ReadMe.md; sourceTree = "<group>"; };
 		EFA0D62027B231AD00E7BC8C /* TimingDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimingDeviceViewController.swift; sourceTree = "<group>"; };
@@ -237,6 +241,8 @@
 				EFD432BB27B0C33800A40393 /* Table of Contents */,
 				EFD4328B27B0C2CD00A40393 /* AppDelegate.swift */,
 				EFD4328D27B0C2CD00A40393 /* SceneDelegate.swift */,
+				5BBD51A527B8A0020002B93A /* TabBarController.swift */,
+				5BBD51A727B8A6BB0002B93A /* Logger.swift */,
 				EFD4328F27B0C2CD00A40393 /* ViewController.swift */,
 				EFD4329127B0C2CD00A40393 /* Main.storyboard */,
 				EFD4329427B0C2CE00A40393 /* Assets.xcassets */,
@@ -466,6 +472,7 @@
 				EFA0D62127B231AD00E7BC8C /* TimingDeviceViewController.swift in Sources */,
 				EFD432C427B0C77F00A40393 /* UIViewConstraintExtension.swift in Sources */,
 				EFCF210827B5F2B400427696 /* ViewControllerRepresentable.swift in Sources */,
+				5BBD51A627B8A0020002B93A /* TabBarController.swift in Sources */,
 				EFD4329027B0C2CD00A40393 /* ViewController.swift in Sources */,
 				EFD432C127B0C4B000A40393 /* TimestampView.swift in Sources */,
 				EFD432CB27B0E69600A40393 /* StopWatchDateFormater.swift in Sources */,
@@ -484,6 +491,7 @@
 				EFA0D62827B26A7800E7BC8C /* UIImageExtension.swift in Sources */,
 				EFA0D62427B2344400E7BC8C /* TimePickViewModel.swift in Sources */,
 				EFD432CF27B0EBA600A40393 /* StopWatchButtonStyle.swift in Sources */,
+				5BBD51A827B8A6BB0002B93A /* Logger.swift in Sources */,
 				EF3AB41327B4DBDE00BE46D3 /* ViewPreviewProvider.swift in Sources */,
 				EFA0D63027B3998400E7BC8C /* TimingCountdownView.swift in Sources */,
 				EFD432C827B0E5E900A40393 /* StopWatchViewController.swift in Sources */,
