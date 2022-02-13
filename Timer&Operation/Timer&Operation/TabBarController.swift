@@ -50,7 +50,6 @@ class TabBarController: UITabBarController {
         }
         
         tabBar.unselectedItemTintColor = TabBarType.normalTinted
-//        tabBar.unselectedItemTintColor = .init(hex: "BCFFB9")
         tabBar.tintColor = TabBarType.highlightlyTinted
         
     }
