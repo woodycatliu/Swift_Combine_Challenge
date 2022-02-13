@@ -8,9 +8,9 @@
 import UIKit
 
 class StopWatchViewController: UIViewController {
-    private let playBtn: UIButton = UIButton()
-    private let resetBtn: UIButton = UIButton()
-    private let timestampView: TimestampView = TimestampView()
+    let playBtn: UIButton = UIButton()
+    let resetBtn: UIButton = UIButton()
+    let timestampView: TimestampView = TimestampView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
