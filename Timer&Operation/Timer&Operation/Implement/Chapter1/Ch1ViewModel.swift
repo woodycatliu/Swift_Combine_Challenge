@@ -37,14 +37,7 @@ class Ch1ViewModel {
     private let stopWatch: StopWatchModel = StopWatchModel()
     
     init() {
-        stopWatch.$currentTime
-            .map { $0.dateString(self.dateFormatterString) }
-            .assign(to: \.timeStamp, weakOn: self)
-            .store(in: &bag)
-        
-        $state
-            .assign(to: Ch1ViewModel.stateChangeAction(_:), on: self)
-            .store(in: &bag)
+        binding()
     }
     
     func stop() {
@@ -79,6 +72,18 @@ class Ch1ViewModel {
 
 extension Ch1ViewModel {
     
+    private func binding() {
+        stopWatch.$currentTime
+            .map { $0.dateString(self.dateFormatterString) }
+            .assign(to: \.timeStamp, weakOn: self)
+            .store(in: &bag)
+        
+        $state
+            .assign(to: Ch1ViewModel.stateChangeAction(_:), on: self)
+            .store(in: &bag)
+    }
+    
+    
     private func stateChangeAction(_ state: TimerState) {
         switch state {
         case .close:
@@ -89,4 +94,6 @@ extension Ch1ViewModel {
             stopWatch.timeStart()
         }
     }
+    
+    
 }

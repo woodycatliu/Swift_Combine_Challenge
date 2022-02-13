@@ -9,12 +9,23 @@ import UIKit
 
 class TabBarController: UITabBarController {
     typealias TabBarType = TabBarSubViewControllerType
+    typealias Layer = CAShapeLayer
+    
     let subViewControllersTypes: [TabBarType] = [.c1, .c2]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewControllers = subViewControllersTypes.map { configureViewController($0) }
         appearanceTabarColor()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let layer = Layer()
+        layer.frame = self.tabBar.bounds
+        layer.fillColor = UIColor.clear.cgColor
+        layer.drawTopSpeparator()
+        self.tabBar.layer.addSublayer(layer)
     }
     
     fileprivate func appearanceTabarColor() {
@@ -24,22 +35,29 @@ class TabBarController: UITabBarController {
             appearance.configureWithOpaqueBackground()
             
             appearance.compactInlineLayoutAppearance.selected.iconColor = TabBarType.highlightlyTinted
-            appearance.compactInlineLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: TabBarType.highlightlyTinted]
+            appearance.compactInlineLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor.clear]
             
             appearance.compactInlineLayoutAppearance.normal.iconColor = TabBarType.normalTinted
             appearance.compactInlineLayoutAppearance.normal.titleTextAttributes = [.foregroundColor: TabBarType.normalTinted]
+
+            
             
             appearance.inlineLayoutAppearance.selected.iconColor = TabBarType.highlightlyTinted
-            appearance.inlineLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: TabBarType.highlightlyTinted]
+            appearance.inlineLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor.clear]
+
+            
             
             appearance.inlineLayoutAppearance.normal.iconColor = TabBarType.normalTinted
             appearance.inlineLayoutAppearance.normal.titleTextAttributes = [.foregroundColor: TabBarType.normalTinted]
+
             
             appearance.stackedLayoutAppearance.selected.iconColor = TabBarType.highlightlyTinted
-            appearance.stackedLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: TabBarType.highlightlyTinted]
+            appearance.stackedLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor.clear]
+
             
             appearance.stackedLayoutAppearance.normal.iconColor = TabBarType.normalTinted
             appearance.stackedLayoutAppearance.normal.titleTextAttributes = [.foregroundColor: TabBarType.normalTinted]
+
             
             appearance.backgroundColor = .black.withAlphaComponent(0.9)
             
@@ -51,13 +69,15 @@ class TabBarController: UITabBarController {
         
         tabBar.unselectedItemTintColor = TabBarType.normalTinted
         tabBar.tintColor = TabBarType.highlightlyTinted
-        
+
     }
     
     fileprivate func configureViewController(_ type: TabBarType)-> UIViewController {
         let vc = type.viewController
         let style = type.barItemStyle
         let barItem = UITabBarItem(title: style.title, image: style.normalImage, selectedImage: style.highlightlyImage)
+        barItem.imageInsets = .init(top: 3, left: 0, bottom: -12, right: 0)
+        barItem.titlePositionAdjustment = UIOffset.init(horizontal: 100, vertical: -50)
         vc.tabBarItem = barItem
         return vc
     }
@@ -106,15 +126,14 @@ extension TabBarSubViewControllerType.BarItemStyle {
     static let chapter2: Self = .init(title: "ch2", normalImage: .init(systemName: "cursorarrow.click.badge.clock")?.withTintColor(.systemGray2), highlightlyImage: .init(systemName: "cursorarrow.click.badge.clock")?.imgWithNewSize(size: .init(width: 38, height: 38)))
 }
 
-extension UIApplication {
-    static var isThereNotch: Bool {
-        let bottomInset: CGFloat
-        if #available(iOS 15.0, *) {
-            bottomInset = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.keyWindow?.safeAreaInsets.bottom ?? 0
-        } else {
-            bottomInset = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first?.safeAreaInsets.bottom ?? 0
-        }
-        return bottomInset != 0
+
+extension TabBarController.Layer {
+    func drawTopSpeparator() {
+        let bezierPath = UIBezierPath()
+        bezierPath.move(to: .zero)
+        bezierPath.addLine(to: .init(x: bounds.maxX, y: bounds.minY))
+        self.lineWidth = 0.5
+        self.strokeColor = UIColor.white.cgColor
+        self.path = bezierPath.cgPath
     }
 }
-

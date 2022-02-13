@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import UIKit
 
 class StopWatchSubClassViewController: StopWatchViewController {
     private var bag: Set<AnyCancellable> = []
@@ -24,21 +25,29 @@ class StopWatchSubClassViewController: StopWatchViewController {
     }
     
     private func binding() {
+        /// 將標籤與字串綁定與 View 做綁定
         viewModel.$timeStamp
             .receive(on: DispatchQueue.main)
             .map { $0 }
             .assign(to: \.text, on: timestampView)
             .store(in: &bag)
         
+        /// 碼表狀態 -> map ButtonStyle
+        /// Style 與 UIButton 做綁定
         viewModel.$state
             .receive(on: DispatchQueue.main)
-            .assign(to: StopWatchSubClassViewController.playButtonConfigure, on: self)
+            .map { $0.playButtonStyle }
+            .assign(to: UIButton.setButton, on: playBtn)
             .store(in: &bag)
     }
 }
 
-extension StopWatchSubClassViewController {
-    private func playButtonConfigure(_ state: Ch1ViewModel.TimerState) {
-        state.playButtonStyle.setButton(playBtn)
+
+extension UIButton {
+    
+    /// 訪問者模式
+    /// - Parameter style: ButtonStyleParameter.Type
+    func setButton(_ style: ButtonStyleParameter.Type) {
+        style.setButton(self)
     }
 }
