@@ -64,7 +64,8 @@ class TimingDeviceViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.overrideUserInterfaceStyle = .dark
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        overrideUserInterfaceStyle = .dark
         configureMainUI()
     }
     
