@@ -11,8 +11,19 @@ import Combine
 class Ch1ViewModel {
     enum TimerState {
         case close, stop, start
+        
+        var playButtonStyle: ButtonStyleParameter.Type {
+            switch self {
+            case .close:
+                return StopWatchMaterial.ButtonStyle.PlayBtn.Start.self
+            case .stop:
+                return StopWatchMaterial.ButtonStyle.PlayBtn.Start.self
+            case .start:
+                return StopWatchMaterial.ButtonStyle.PlayBtn.Close.self
+            }
+        }
     }
-    
+        
     private var bag: Set<AnyCancellable> = []
     
     private let dateFormatterString: String = StopWatchMaterial.stopWatchDateFormater
@@ -21,7 +32,7 @@ class Ch1ViewModel {
     private(set) var timeStamp: String = "00:00.00"
     
     @Published
-    private var state: TimerState = .close
+    private(set) var state: TimerState = .close
     
     private let stopWatch: StopWatchModel = StopWatchModel()
     
@@ -49,7 +60,7 @@ class Ch1ViewModel {
     }
     
     @objc
-    func StartAction() {
+    func startAction() {
         switch state {
         case .close:
             start()
@@ -78,30 +89,4 @@ extension Ch1ViewModel {
             stopWatch.timeStart()
         }
     }
-}
-
-
-class StopWatchModel {
-    @Published
-    private(set) var currentTime: TimeInterval = 0
-    private var timerTask: AnyCancellable?
-    private let everTimeInterval: TimeInterval = 0.01
-    
-    func timeStart() {
-        timerTask?.cancel()
-        timerTask = Timer.publish(every: everTimeInterval, tolerance: nil, on: .current, in: .common, options: nil)
-            .map { $0.timeIntervalSinceNow }
-            .scan(currentTime, +)
-            .assign(to: \.currentTime, weakOn: self)
-    }
-    
-    func stop() {
-        timerTask?.cancel()
-    }
-    
-    func close() {
-        timerTask?.cancel()
-        currentTime = 0
-    }
-    
 }
