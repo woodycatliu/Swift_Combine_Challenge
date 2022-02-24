@@ -171,8 +171,3 @@ extension TimingDeviceViewController {
         return lb
     }
 }
-
-extension TimingDeviceViewController {
-    
-    
-}
