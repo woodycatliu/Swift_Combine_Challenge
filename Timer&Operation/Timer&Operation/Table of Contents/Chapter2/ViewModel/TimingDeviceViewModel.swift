@@ -12,7 +12,7 @@ class TimingDeviceViewModel {
     
     typealias Timestamp = Int
     /// 選定的定時時間Cache
-    private var timeCache: [TimePickType: Timestamp] = [:]
+    var timeCache: [TimePickType: Timestamp] = [:]
 }
 
 extension TimingDeviceViewModel {

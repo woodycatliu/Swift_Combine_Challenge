@@ -12,16 +12,16 @@ class TimingDeviceViewController: UIViewController {
     typealias StartStyle = TimeDeviceMaterial.ButtonStyle.StartButton
     typealias ContinueStyle = TimeDeviceMaterial.ButtonStyle.ContinueButton
     
-    private let viewModel: TimingDeviceViewModel = TimingDeviceViewModel()
+    var viewModel: TimingDeviceViewModel = TimingDeviceViewModel()
     
-    private lazy var datePicker: UIPickerView = {
+    lazy var datePicker: UIPickerView = {
         let dp = UIPickerView()
         dp.delegate = self
         dp.dataSource = self
         return dp
     }()
     
-    private lazy var countdownViewContainer: UIView = {
+    lazy var countdownViewContainer: UIView = {
         let cv = UIView()
         cv.isHidden = false
         cv.backgroundColor = view.backgroundColor
@@ -31,14 +31,14 @@ class TimingDeviceViewController: UIViewController {
         return cv
     }()
     
-    private lazy var timingCountdownView: TimingCountdownView = {
+    lazy var timingCountdownView: TimingCountdownView = {
         let cv = TimingCountdownView()
         cv.maxTimeInterval(10)
             .setCurrentTiming(0)
         return cv
     }()
     
-    private let cancelBtn: ConcentricCircleStyleButton = {
+    let cancelBtn: ConcentricCircleStyleButton = {
        let btn = ConcentricCircleStyleButton()
         CancelStyle.setButton(btn)
         btn.titleLabel?.font = .systemFont(ofSize: 14, weight: .medium)
@@ -46,7 +46,7 @@ class TimingDeviceViewController: UIViewController {
         return btn
     }()
     
-    private let playBtn: ConcentricCircleStyleButton = {
+    let playBtn: ConcentricCircleStyleButton = {
        let btn = ConcentricCircleStyleButton()
         StartStyle.setButton(btn)
         btn.titleLabel?.font = .systemFont(ofSize: 14, weight: .medium)
