@@ -12,16 +12,16 @@ class TimingDeviceViewController: UIViewController {
     typealias StartStyle = TimeDeviceMaterial.ButtonStyle.StartButton
     typealias ContinueStyle = TimeDeviceMaterial.ButtonStyle.ContinueButton
     
-    private let viewModel: TimingDeviceViewModel = TimingDeviceViewModel()
+    var viewModel: TimingDeviceViewModel = TimingDeviceViewModel()
     
-    private lazy var datePicker: UIPickerView = {
+    lazy var datePicker: UIPickerView = {
         let dp = UIPickerView()
         dp.delegate = self
         dp.dataSource = self
         return dp
     }()
     
-    private lazy var countdownViewContainer: UIView = {
+    lazy var countdownViewContainer: UIView = {
         let cv = UIView()
         cv.isHidden = false
         cv.backgroundColor = view.backgroundColor
@@ -31,33 +31,24 @@ class TimingDeviceViewController: UIViewController {
         return cv
     }()
     
-    private lazy var timingCountdownView: TimingCountdownView = {
+    lazy var timingCountdownView: TimingCountdownView = {
         let cv = TimingCountdownView()
         cv.maxTimeInterval(10)
             .setCurrentTiming(0)
         return cv
     }()
     
-    private let cancelBtn: ConcentricCircleStyleButton = {
+    let cancelBtn: ConcentricCircleStyleButton = {
        let btn = ConcentricCircleStyleButton()
-        btn.circleColor = CancelStyle.backgroundColor
-        btn.circileHighlightedColor = CancelStyle.highlightlyBackgrounColor
-        btn.setTitle(CancelStyle.title, for: .normal)
-        btn.setTitle(CancelStyle.title, for: .highlighted)
+        CancelStyle.setButton(btn)
         btn.titleLabel?.font = .systemFont(ofSize: 14, weight: .medium)
         btn.isEnabled = false
-        btn.setTitleColor(CancelStyle.disableTitleColor, for: .disabled)
         return btn
     }()
     
-    private let playBtn: ConcentricCircleStyleButton = {
+    let playBtn: ConcentricCircleStyleButton = {
        let btn = ConcentricCircleStyleButton()
-        btn.circleColor = StartStyle.backgroundColor
-        btn.circileHighlightedColor = StartStyle.highlightlyBackgrounColor
-        btn.setTitle(StartStyle.title, for: .normal)
-        btn.setTitle(StartStyle.title, for: .highlighted)
-        btn.setTitleColor(StartStyle.titleColor, for: .normal)
-        btn.setTitleColor(StartStyle.titleColor, for: .highlighted)
+        StartStyle.setButton(btn)
         btn.titleLabel?.font = .systemFont(ofSize: 14, weight: .medium)
         return btn
     }()

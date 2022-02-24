@@ -10,6 +10,7 @@ protocol ButtonStyleParameter {
     static var title: String { get }
     static var titleColor: UIColor { get }
     static var highlightedColor: UIColor { get }
+    static var backgroundColor: UIColor { get }
     static func setButton(_ button: UIButton)
 }
 
@@ -29,11 +30,13 @@ extension StopWatchMaterial {
             static let font: UIFont = .systemFont(ofSize: 30, weight: .semibold)
             static let backgroundColor: UIColor = .clear
             struct Start: ButtonStyleParameter {
+                static var backgroundColor: UIColor = .clear
                 static var title: String = "START"
                 static var titleColor: UIColor = .white
                 static var highlightedColor: UIColor = .systemGray2
             }
             struct Close: ButtonStyleParameter {
+                static var backgroundColor: UIColor = .clear
                 static var title: String = "STOP"
                 static var titleColor: UIColor = .white
                 static var highlightedColor: UIColor = .systemGray2
@@ -48,6 +51,7 @@ extension StopWatchMaterial {
             static let font: UIFont = .systemFont(ofSize: 20, weight: .semibold)
             static let backgroundColor: UIColor = .clear
             struct Reset: ButtonStyleParameter {
+                static var backgroundColor: UIColor = .clear
                 static var title: String = "RESET"
                 static var titleColor: UIColor = .systemGray
                 static var highlightedColor: UIColor = .black.withAlphaComponent(0.8)
