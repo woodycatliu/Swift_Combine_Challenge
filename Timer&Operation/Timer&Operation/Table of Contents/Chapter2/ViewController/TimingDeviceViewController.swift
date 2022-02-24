@@ -40,24 +40,15 @@ class TimingDeviceViewController: UIViewController {
     
     private let cancelBtn: ConcentricCircleStyleButton = {
        let btn = ConcentricCircleStyleButton()
-        btn.circleColor = CancelStyle.backgroundColor
-        btn.circileHighlightedColor = CancelStyle.highlightlyBackgrounColor
-        btn.setTitle(CancelStyle.title, for: .normal)
-        btn.setTitle(CancelStyle.title, for: .highlighted)
+        CancelStyle.setButton(btn)
         btn.titleLabel?.font = .systemFont(ofSize: 14, weight: .medium)
         btn.isEnabled = false
-        btn.setTitleColor(CancelStyle.disableTitleColor, for: .disabled)
         return btn
     }()
     
     private let playBtn: ConcentricCircleStyleButton = {
        let btn = ConcentricCircleStyleButton()
-        btn.circleColor = StartStyle.backgroundColor
-        btn.circileHighlightedColor = StartStyle.highlightlyBackgrounColor
-        btn.setTitle(StartStyle.title, for: .normal)
-        btn.setTitle(StartStyle.title, for: .highlighted)
-        btn.setTitleColor(StartStyle.titleColor, for: .normal)
-        btn.setTitleColor(StartStyle.titleColor, for: .highlighted)
+        StartStyle.setButton(btn)
         btn.titleLabel?.font = .systemFont(ofSize: 14, weight: .medium)
         return btn
     }()
