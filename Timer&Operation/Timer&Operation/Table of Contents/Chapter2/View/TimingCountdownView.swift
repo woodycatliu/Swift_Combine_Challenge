@@ -120,6 +120,10 @@ extension TimingCountdownView {
         self.lineWidth = width
         return self
     }
+    
+    func updateCurrent(_ time: TimeInterval) {
+        currentTiming = time
+    }
 }
 
 extension TimingCountdownView.Bounds {
