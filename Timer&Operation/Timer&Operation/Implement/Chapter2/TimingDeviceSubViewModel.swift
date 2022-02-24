@@ -17,7 +17,7 @@ class TimingDeviceSubViewModel: TimingDeviceViewModel {
     private let timeDeviceModel: TimingDeviceModel = TimingDeviceModel()
     
     @Published
-    private(set) var timeStamp: String = "00:00.00"
+    private(set) var timeStamp: TimeInterval = 0
     
     private(set) var status: CurrentValueSubject<Status, Never> = .init(.close)
     
@@ -44,13 +44,7 @@ class TimingDeviceSubViewModel: TimingDeviceViewModel {
     
     override init() {
         super.init()
-        let timeFormaterString: (TimeInterval)-> String = { time -> String in
-            let formatter = time.isGreaterThanHours ? greaterThanHoursFormatterString : smallerThanHoursFormatterString
-            return time.dateString(formatter)
-        }
-        
         self.timeDeviceModel.$currentTime
-            .map { timeFormaterString($0) }
             .assign(to: \.timeStamp, weakOn: self)
             .store(in: &bag)
     }
