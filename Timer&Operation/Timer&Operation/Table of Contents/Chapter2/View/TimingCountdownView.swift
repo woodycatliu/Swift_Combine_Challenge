@@ -12,6 +12,7 @@ class TimingCountdownView: UIView {
     fileprivate typealias Bounds = CGRect
     private let dateFormatter: DateFormatter = {
         let df = DateFormatter()
+        df.timeZone = TimeZone(secondsFromGMT: 0)
         df.amSymbol = "上午"
         df.pmSymbol = "下午"
         return df
