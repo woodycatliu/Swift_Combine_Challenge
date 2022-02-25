@@ -16,7 +16,7 @@ class TimingCountdownView: UIView {
         df.pmSymbol = "下午"
         return df
     }()
-    private var lineWidth: CGFloat = 9.5
+    private var lineWidth: CGFloat = 7
     private var maxTimeInterval: TimeInterval = 0
     
     private var bellImage: UIImage? = .init(systemName: "bell.fill")?.withTintColor(.gray.withAlphaComponent(0.8))
@@ -56,14 +56,14 @@ class TimingCountdownView: UIView {
         ctx.strokePath()
         
         let diff = currentTiming / maxTimeInterval * .pi * 2
-        ctx.addArc(center: bounds.center, radius: radius, startAngle: 3 / 2 * .pi - diff, endAngle: -.pi / 2 - 0.0000001 * .pi, clockwise: true)
+        ctx.addArc(center: bounds.center, radius: radius, startAngle: diff - 1 / 2 * .pi, endAngle: -.pi / 2 - 0.0000001 * .pi, clockwise: true)
         lineColor.setStroke()
         ctx.strokePath()
     }
     
     private func drawTimestamp() {
-        let diff = maxTimeInterval - currentTiming
-        let realDiff = diff >= 0 ? diff : maxTimeInterval - Double(Int(currentTiming) % Int(maxTimeInterval))
+        let diff = currentTiming
+        let realDiff = diff >= 0 ? diff : 0
         let formater: String = realDiff >= 60 ? TimeDeviceMaterial.countdownTimeDateFormaterGreaterThanHours : TimeDeviceMaterial.countdownTimeDateFormaterSmallerThanHours
         let date = Date(timeIntervalSince1970: realDiff)
         dateFormatter.dateFormat = formater
@@ -123,6 +123,10 @@ extension TimingCountdownView {
     
     func updateCurrent(_ time: TimeInterval) {
         currentTiming = time
+    }
+    
+    func updateMaxTimeInterval(_ time: TimeInterval) {
+        maxTimeInterval = time
     }
 }
 
