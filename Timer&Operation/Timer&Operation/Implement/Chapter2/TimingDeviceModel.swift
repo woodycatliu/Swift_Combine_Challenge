@@ -47,6 +47,9 @@ class TimingDeviceModel {
         timerTask = nil
     }
     
+    init() {
+        bindding()
+    }
     
     
 }
@@ -58,8 +61,8 @@ extension TimingDeviceModel {
             guard stop else { return }
             self?.status = .stop
         }
-        $currentTime.sink(receiveValue: { print($0) }).store(in: &bag)
-        $currentTime.filter { $0 <= 0 }.map { _ in true }.sink(receiveValue: close).store(in: &bag)
+        $currentTime.print().sink(receiveValue: { _ in }).store(in: &bag)
+        $currentTime.dropFirst().filter { $0 <= 0 }.map { _ in true }.sink(receiveValue: close).store(in: &bag)
         $status.assign(to: TimingDeviceModel.didChangeStatus(_:), on: self).store(in: &bag)
     }
 }
@@ -84,3 +87,4 @@ extension TimingDeviceModel {
         }
     }
 }
+

@@ -90,7 +90,7 @@ enum TabBarSubViewControllerType: Int, CaseIterable {
         case .c1:
             return navigationControllerSetting(StopWatchSubClassViewController())
         case .c2:
-            return navigationControllerSetting(TimingDeviceViewController())
+            return navigationControllerSetting(TimingDeviceSubViewController())
         }
     }
     

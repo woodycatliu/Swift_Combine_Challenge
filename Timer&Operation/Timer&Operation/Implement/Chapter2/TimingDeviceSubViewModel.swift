@@ -25,6 +25,17 @@ class TimingDeviceSubViewModel: TimingDeviceViewModel {
         timeDeviceModel.status = .start(dration)
     }
     
+    func playBtnAction() {
+        switch status.value {
+        case .start:
+            stop()
+        case .stop:
+            restart()
+        case .close:
+            startTime()
+        }
+    }
+    
     func startTime() {
         let dration = timeCache.totalDration
         startTime(dration: dration)
@@ -47,5 +58,24 @@ class TimingDeviceSubViewModel: TimingDeviceViewModel {
         self.timeDeviceModel.$currentTime
             .assign(to: \.timeStamp, weakOn: self)
             .store(in: &bag)
+        
+        self.timeDeviceModel.$status
+            .map { Status.transformStatus($0)}
+            .sink(receiveValue: { [unowned self] in self.status.send($0) })
+            .store(in: &bag)
+    }
+}
+
+extension TimingDeviceViewModel.Status {
+    static func transformStatus(_ status: TimingDeviceModel.Status)-> Self {
+        switch status {
+        case .start(_):
+            return .start
+        case .stop:
+            return .stop
+        case .close:
+            return .close
+        }
+        
     }
 }
