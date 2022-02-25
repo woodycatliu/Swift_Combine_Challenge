@@ -124,6 +124,10 @@ extension TimingCountdownView {
     func updateCurrent(_ time: TimeInterval) {
         currentTiming = time
     }
+    
+    func updateMaxTimeInterval(_ time: TimeInterval) {
+        maxTimeInterval = time
+    }
 }
 
 extension TimingCountdownView.Bounds {

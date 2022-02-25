@@ -35,6 +35,12 @@ class TimingDeviceSubViewController: TimingDeviceViewController {
             .receive(on: DispatchQueue.main)
             .assign(to: TimingDeviceSubViewController.showTimingDeviceView, on: self)
             .store(in: &bag)
+        
+        subViewModel?.$timeCache
+            .map { $0.totalDration }
+            .receive(on: DispatchQueue.main)
+            .assign(to: timingCountdownView.updateMaxTimeInterval(_:))
+            .store(in: &bag)
     }
     
 }
