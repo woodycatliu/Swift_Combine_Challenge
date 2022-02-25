@@ -59,7 +59,7 @@ extension TimingDeviceModel {
     func bindding() {
         let close: (Bool)-> () = { [weak self] stop in
             guard stop else { return }
-            self?.status = .stop
+            self?.status = .close
         }
         $currentTime.print().sink(receiveValue: { _ in }).store(in: &bag)
         $currentTime.dropFirst().filter { $0 <= 0 }.map { _ in true }.sink(receiveValue: close).store(in: &bag)
