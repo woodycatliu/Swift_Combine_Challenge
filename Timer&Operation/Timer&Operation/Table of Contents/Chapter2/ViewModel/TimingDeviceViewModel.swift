@@ -6,12 +6,13 @@
 //
 
 import Foundation
-import UIKit
+import Combine
 
 class TimingDeviceViewModel {
     
     typealias Timestamp = Int
     /// 選定的定時時間Cache
+    @Published
     var timeCache: [TimePickType: Timestamp] = [:]
 }
 
