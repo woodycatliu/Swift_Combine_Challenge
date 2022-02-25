@@ -67,7 +67,7 @@ extension Dictionary where Self.Key == TimePickType, Self.Value == TimingDeviceV
         return self[type]?.timeInterval(type) ?? 0
     }
     
-    var totalDration: TimeInterval {
+    var totalDuration: TimeInterval {
         return self.timeInterval(.hr) + self.timeInterval(.min) + self.timeInterval(.sec)
     }
     

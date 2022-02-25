@@ -26,7 +26,7 @@ extension TimeDeviceMaterial {
             static let titleColor: UIColor = .green.withAlphaComponent(0.7)
         }
         
-        struct StopButton: ButtonStyleParameter {
+        struct StopButton: ButtonParameter {
             private static let orange: UIColor = .init(red: 255/255, green: 148/255, blue: 16/255, alpha: 1)
             static var highlightedColor: UIColor = Self.orange.withAlphaComponent(0.1)
             static let backgroundColor: UIColor = Self.orange.withAlphaComponent(0.15)
@@ -34,7 +34,7 @@ extension TimeDeviceMaterial {
             static let titleColor: UIColor = .orange
         }
         
-        struct CancelButton: ButtonStyleParameter {
+        struct CancelButton: ButtonParameter {
             static var highlightedColor: UIColor = .systemGray4.withAlphaComponent(0.3)
             static let backgroundColor: UIColor = .systemGray4.withAlphaComponent(0.9)
             static let title: String = "取消"

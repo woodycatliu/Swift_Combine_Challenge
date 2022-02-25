@@ -36,8 +36,17 @@ class TimingDeviceSubViewController: TimingDeviceViewController {
             .assign(to: TimingDeviceSubViewController.showTimingDeviceView, on: self)
             .store(in: &bag)
         
+        subViewModel?.status
+            .map { $0 != .close }
+            .assign(to: \.isEnabled, on: cancelBtn)
+            .store(in: &bag)
+        
+        subViewModel?.status
+            .assign(to: TimingDeviceSubViewController.updatePlayButtonStyle, on: self)
+            .store(in: &bag)
+        
         subViewModel?.$timeCache
-            .map { $0.totalDration }
+            .map { $0.totalDuration }
             .receive(on: DispatchQueue.main)
             .assign(to: timingCountdownView.updateMaxTimeInterval(_:))
             .store(in: &bag)
@@ -46,6 +55,18 @@ class TimingDeviceSubViewController: TimingDeviceViewController {
 }
 
 extension TimingDeviceSubViewController {
+    
+    func updatePlayButtonStyle(_ status: TimingDeviceViewModel.Status) {
+        switch status {
+        case .start:
+            TimeDeviceMaterial.ButtonStyle.StopButton.setButton(playBtn)
+        case .stop:
+            TimeDeviceMaterial.ButtonStyle.ContinueButton.setButton(playBtn)
+        case .close:
+            TimeDeviceMaterial.ButtonStyle.StartButton.setButton(playBtn)
+        }
+    }
+    
     func showTimingDeviceView(_ isHidden: Bool) {
         countdownViewContainer.isHidden = isHidden
     }

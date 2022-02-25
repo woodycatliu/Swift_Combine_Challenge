@@ -7,22 +7,36 @@
 
 import Foundation
 import Combine
-
-private let greaterThanHoursFormatterString: String = TimeDeviceMaterial.countdownTimeDateFormaterGreaterThanHours
-private let smallerThanHoursFormatterString: String = TimeDeviceMaterial.countdownTimeDateFormaterSmallerThanHours
+import ImageIO
 
 class TimingDeviceSubViewModel: TimingDeviceViewModel {
     private var bag: Set<AnyCancellable> = []
-    
-    private let timeDeviceModel: TimingDeviceModel = TimingDeviceModel()
-    
+
     @Published
     private(set) var timeStamp: TimeInterval = 0
     
     private(set) var status: CurrentValueSubject<Status, Never> = .init(.close)
     
-    private func startTime(dration: TimeInterval) {
-        timeDeviceModel.status = .start(dration)
+    private var timingTask: AnyCancellable? {
+        didSet {
+            if timingTask != nil { status.send(.start)}
+        }
+    }
+    
+    private func startTime(duration: TimeInterval) {
+        let completion: (Subscribers.Completion<Never>)-> () = { [weak self] in
+            guard case Subscribers.Completion<Never>.finished = $0 else { return }
+            self?.close()
+        }
+        
+        let receiveValue: (TimeInterval)-> Void = { [weak self] in
+            self?.timeStamp = $0
+        }
+        
+        timingTask = Timer.TimingPublisher(duration: duration)
+            .print()
+            .sink(receiveCompletion: completion, receiveValue: receiveValue)
+            
     }
     
     func playBtnAction() {
@@ -37,45 +51,29 @@ class TimingDeviceSubViewModel: TimingDeviceViewModel {
     }
     
     func startTime() {
-        let dration = timeCache.totalDration
-        startTime(dration: dration)
+        startTime(duration: timeCache.totalDuration)
     }
     
     func restart() {
-        timeDeviceModel.status = .start(nil)
+        startTime(duration: timeStamp)
     }
     
     func stop() {
-        timeDeviceModel.status = .stop
+        cancel()
+        status.send(.stop)
     }
     
     func close() {
-        timeDeviceModel.status = .close
+        timeStamp = 0
+        cancel()
+        status.send(.close)
     }
     
-    override init() {
-        super.init()
-        self.timeDeviceModel.$currentTime
-            .assign(to: \.timeStamp, weakOn: self)
-            .store(in: &bag)
-        
-        self.timeDeviceModel.$status
-            .map { Status.transformStatus($0)}
-            .sink(receiveValue: { [unowned self] in self.status.send($0) })
-            .store(in: &bag)
+    private func cancel() {
+        timingTask?.cancel()
+        timingTask = nil
     }
+    
 }
 
-extension TimingDeviceViewModel.Status {
-    static func transformStatus(_ status: TimingDeviceModel.Status)-> Self {
-        switch status {
-        case .start(_):
-            return .start
-        case .stop:
-            return .stop
-        case .close:
-            return .close
-        }
-        
-    }
-}
+
