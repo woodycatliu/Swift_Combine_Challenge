@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.overrideUserInterfaceStyle = .dark
-        let subVC = TimingDeviceViewController()
+        let subVC = StopWatchViewController()
         self.addChild(subVC)
         view.addSubview(subVC.view)
         subVC.view.fillSuperview()

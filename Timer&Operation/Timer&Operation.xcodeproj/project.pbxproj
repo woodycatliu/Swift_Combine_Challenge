@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9DE8A24627D0BC7A002C3397 /* StopWatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE8A24527D0BC7A002C3397 /* StopWatchViewModel.swift */; };
 		EF3AB41327B4DBDE00BE46D3 /* ViewPreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3AB41227B4DBDE00BE46D3 /* ViewPreviewProvider.swift */; };
 		EFA0D61F27B22F5800E7BC8C /* Chapter_2_ReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = EFA0D61E27B22F5800E7BC8C /* Chapter_2_ReadMe.md */; };
 		EFA0D62127B231AD00E7BC8C /* TimingDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA0D62027B231AD00E7BC8C /* TimingDeviceViewController.swift */; };
@@ -63,6 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9DE8A24527D0BC7A002C3397 /* StopWatchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopWatchViewModel.swift; sourceTree = "<group>"; };
 		EF3AB41227B4DBDE00BE46D3 /* ViewPreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPreviewProvider.swift; sourceTree = "<group>"; };
 		EFA0D61E27B22F5800E7BC8C /* Chapter_2_ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Chapter_2_ReadMe.md; sourceTree = "<group>"; };
 		EFA0D62027B231AD00E7BC8C /* TimingDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimingDeviceViewController.swift; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 			isa = PBXGroup;
 			children = (
 				EFD432D627B1035C00A40393 /* Implement_ReadMe.md */,
+				9DE8A24527D0BC7A002C3397 /* StopWatchViewModel.swift */,
 			);
 			path = Implement;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 				EFD4328C27B0C2CD00A40393 /* AppDelegate.swift in Sources */,
 				EFD432D127B0ED9F00A40393 /* ScreenExtension.swift in Sources */,
 				EFCF210227B5F21100427696 /* ViewProvider.swift in Sources */,
+				9DE8A24627D0BC7A002C3397 /* StopWatchViewModel.swift in Sources */,
 				EFCF210027B4FF1700427696 /* ViewControllerPreviewProvider.swift in Sources */,
 				EFCF210627B5F29100427696 /* ViewControllerProvider.swift in Sources */,
 				EFA0D62B27B2733700E7BC8C /* ConcentricCircleStyleButton.swift in Sources */,

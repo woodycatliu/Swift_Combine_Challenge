@@ -24,6 +24,7 @@ class TimestampView: UIView {
         lb.numberOfLines = 1
         lb.textAlignment = .center
         lb.font = UIFont.systemFont(ofSize: 45, weight: .bold)
+        lb.textColor = .black
         lb.adjustsFontSizeToFitWidth = true
         return lb
     }()
