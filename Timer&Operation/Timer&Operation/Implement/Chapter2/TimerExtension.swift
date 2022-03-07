@@ -26,11 +26,14 @@ extension Timer {
             start()
         }
         
+        deinit {
+            print("\(self) is deinit")
+        }
+        
         func request(_ demand: Subscribers.Demand) {}
         
         func cancel() {
             subscriber?.receive(completion: .finished)
-            bag = []
             subscriber = nil
         }
         
