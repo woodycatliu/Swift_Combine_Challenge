@@ -65,7 +65,7 @@ class TimingCountdownView: UIView {
     private func drawTimestamp() {
         let diff = currentTiming
         let realDiff = diff >= 0 ? diff : 0
-        let formater: String = realDiff >= 60 ? TimeDeviceMaterial.countdownTimeDateFormaterGreaterThanHours : TimeDeviceMaterial.countdownTimeDateFormaterSmallerThanHours
+        let formater: String = realDiff >= 3600 ? TimeDeviceMaterial.countdownTimeDateFormaterGreaterThanHours : TimeDeviceMaterial.countdownTimeDateFormaterSmallerThanHours
         let date = Date(timeIntervalSince1970: realDiff)
         dateFormatter.dateFormat = formater
         
