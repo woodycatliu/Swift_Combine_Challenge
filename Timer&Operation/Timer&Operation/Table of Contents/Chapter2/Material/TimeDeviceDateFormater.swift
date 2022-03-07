@@ -8,7 +8,7 @@
 import Foundation
 
 extension TimeDeviceMaterial {
-    static let countdownTimeDateFormaterGreaterThanHours: String = "hh:mm:ss"
+    static let countdownTimeDateFormaterGreaterThanHours: String = "HH:mm:ss"
     static let countdownTimeDateFormaterSmallerThanHours: String = "mm:ss"
 
 }
