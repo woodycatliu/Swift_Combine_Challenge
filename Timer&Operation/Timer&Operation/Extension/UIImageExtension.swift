@@ -19,7 +19,6 @@ extension UIImage {
         outerRing.lineWidth = 2
         
         let outBezierPath = UIBezierPath(ovalIn: bounds.insetBy(dx: 1, dy: 1))
-        outBezierPath.fill()
         outerRing.path = outBezierPath.cgPath
         
         let innerCircle = CAShapeLayer()
