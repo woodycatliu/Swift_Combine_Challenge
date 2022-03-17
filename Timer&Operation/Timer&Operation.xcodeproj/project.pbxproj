@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D30E2FF27D8AE2E00364D5F /* ImpTimingDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D30E2FE27D8AE2E00364D5F /* ImpTimingDeviceViewController.swift */; };
 		9DE8A24627D0BC7A002C3397 /* StopWatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE8A24527D0BC7A002C3397 /* StopWatchViewModel.swift */; };
 		EF3AB41327B4DBDE00BE46D3 /* ViewPreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3AB41227B4DBDE00BE46D3 /* ViewPreviewProvider.swift */; };
 		EFA0D61F27B22F5800E7BC8C /* Chapter_2_ReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = EFA0D61E27B22F5800E7BC8C /* Chapter_2_ReadMe.md */; };
@@ -64,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9D30E2FE27D8AE2E00364D5F /* ImpTimingDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpTimingDeviceViewController.swift; sourceTree = "<group>"; };
 		9DE8A24527D0BC7A002C3397 /* StopWatchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopWatchViewModel.swift; sourceTree = "<group>"; };
 		EF3AB41227B4DBDE00BE46D3 /* ViewPreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPreviewProvider.swift; sourceTree = "<group>"; };
 		EFA0D61E27B22F5800E7BC8C /* Chapter_2_ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Chapter_2_ReadMe.md; sourceTree = "<group>"; };
@@ -132,6 +134,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D30E2FC27D8AE0100364D5F /* Chapter1 */ = {
+			isa = PBXGroup;
+			children = (
+				9DE8A24527D0BC7A002C3397 /* StopWatchViewModel.swift */,
+			);
+			path = Chapter1;
+			sourceTree = "<group>";
+		};
+		9D30E2FD27D8AE0600364D5F /* Chapter2 */ = {
+			isa = PBXGroup;
+			children = (
+				9D30E2FE27D8AE2E00364D5F /* ImpTimingDeviceViewController.swift */,
+			);
+			path = Chapter2;
+			sourceTree = "<group>";
+		};
 		EF3AB40F27B4DB9100BE46D3 /* UIKit_PreviewProvider */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,7 +344,8 @@
 			isa = PBXGroup;
 			children = (
 				EFD432D627B1035C00A40393 /* Implement_ReadMe.md */,
-				9DE8A24527D0BC7A002C3397 /* StopWatchViewModel.swift */,
+				9D30E2FC27D8AE0100364D5F /* Chapter1 */,
+				9D30E2FD27D8AE0600364D5F /* Chapter2 */,
 			);
 			path = Implement;
 			sourceTree = "<group>";
@@ -485,6 +504,7 @@
 				EFD432CD27B0EB4800A40393 /* StopWatchMaterial.swift in Sources */,
 				EFA0D62E27B3813400E7BC8C /* TimeDeviceButtonStyle.swift in Sources */,
 				EFA0D62627B2453700E7BC8C /* TimingDeviceViewModel.swift in Sources */,
+				9D30E2FF27D8AE2E00364D5F /* ImpTimingDeviceViewController.swift in Sources */,
 				EFA0D62827B26A7800E7BC8C /* UIImageExtension.swift in Sources */,
 				EFA0D62427B2344400E7BC8C /* TimePickViewModel.swift in Sources */,
 				EFD432CF27B0EBA600A40393 /* StopWatchButtonStyle.swift in Sources */,
