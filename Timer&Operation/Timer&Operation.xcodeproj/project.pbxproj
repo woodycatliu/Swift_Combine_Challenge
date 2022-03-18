@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		EF3AB41327B4DBDE00BE46D3 /* ViewPreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3AB41227B4DBDE00BE46D3 /* ViewPreviewProvider.swift */; };
+		EF6F2C0027E4579200F528BF /* Chapter_3_ReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = EF6F2BFF27E4579200F528BF /* Chapter_3_ReadMe.md */; };
+		EF6F2C0427E4599E00F528BF /* NeonSignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6F2C0327E4599E00F528BF /* NeonSignViewController.swift */; };
+		EF6F2C0727E47CCE00F528BF /* NeonSignButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6F2C0627E47CCE00F528BF /* NeonSignButtonStyle.swift */; };
+		EF6F2C0927E47D1700F528BF /* NeonSignMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6F2C0827E47D1700F528BF /* NeonSignMaterial.swift */; };
 		EFA0D61F27B22F5800E7BC8C /* Chapter_2_ReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = EFA0D61E27B22F5800E7BC8C /* Chapter_2_ReadMe.md */; };
 		EFA0D62127B231AD00E7BC8C /* TimingDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA0D62027B231AD00E7BC8C /* TimingDeviceViewController.swift */; };
 		EFA0D62427B2344400E7BC8C /* TimePickViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA0D62327B2344400E7BC8C /* TimePickViewModel.swift */; };
@@ -64,6 +68,10 @@
 
 /* Begin PBXFileReference section */
 		EF3AB41227B4DBDE00BE46D3 /* ViewPreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPreviewProvider.swift; sourceTree = "<group>"; };
+		EF6F2BFF27E4579200F528BF /* Chapter_3_ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Chapter_3_ReadMe.md; sourceTree = "<group>"; };
+		EF6F2C0327E4599E00F528BF /* NeonSignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeonSignViewController.swift; sourceTree = "<group>"; };
+		EF6F2C0627E47CCE00F528BF /* NeonSignButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeonSignButtonStyle.swift; sourceTree = "<group>"; };
+		EF6F2C0827E47D1700F528BF /* NeonSignMaterial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeonSignMaterial.swift; sourceTree = "<group>"; };
 		EFA0D61E27B22F5800E7BC8C /* Chapter_2_ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Chapter_2_ReadMe.md; sourceTree = "<group>"; };
 		EFA0D62027B231AD00E7BC8C /* TimingDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimingDeviceViewController.swift; sourceTree = "<group>"; };
 		EFA0D62327B2344400E7BC8C /* TimePickViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickViewModel.swift; sourceTree = "<group>"; };
@@ -158,6 +166,33 @@
 				EFCF210727B5F2B400427696 /* ViewControllerRepresentable.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EF6F2BFE27E4575F00F528BF /* Chapter3 */ = {
+			isa = PBXGroup;
+			children = (
+				EF6F2C0527E47CB900F528BF /* Material */,
+				EF6F2C0227E4596C00F528BF /* ViewController */,
+				EF6F2BFF27E4579200F528BF /* Chapter_3_ReadMe.md */,
+			);
+			path = Chapter3;
+			sourceTree = "<group>";
+		};
+		EF6F2C0227E4596C00F528BF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EF6F2C0327E4599E00F528BF /* NeonSignViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EF6F2C0527E47CB900F528BF /* Material */ = {
+			isa = PBXGroup;
+			children = (
+				EF6F2C0827E47D1700F528BF /* NeonSignMaterial.swift */,
+				EF6F2C0627E47CCE00F528BF /* NeonSignButtonStyle.swift */,
+			);
+			path = Material;
 			sourceTree = "<group>";
 		};
 		EFA0D61C27B205F200E7BC8C /* Chapter2 */ = {
@@ -267,6 +302,7 @@
 		EFD432BB27B0C33800A40393 /* Table of Contents */ = {
 			isa = PBXGroup;
 			children = (
+				EF6F2BFE27E4575F00F528BF /* Chapter3 */,
 				EFA0D61C27B205F200E7BC8C /* Chapter2 */,
 				EFD432BC27B0C39500A40393 /* Chapter1 */,
 			);
@@ -432,6 +468,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF6F2C0027E4579200F528BF /* Chapter_3_ReadMe.md in Resources */,
 				EFD432D727B1035C00A40393 /* Implement_ReadMe.md in Resources */,
 				EFA0D61F27B22F5800E7BC8C /* Chapter_2_ReadMe.md in Resources */,
 				EFD4329827B0C2CE00A40393 /* LaunchScreen.storyboard in Resources */,
@@ -472,11 +509,14 @@
 				EFD4328C27B0C2CD00A40393 /* AppDelegate.swift in Sources */,
 				EFD432D127B0ED9F00A40393 /* ScreenExtension.swift in Sources */,
 				EFCF210227B5F21100427696 /* ViewProvider.swift in Sources */,
+				EF6F2C0927E47D1700F528BF /* NeonSignMaterial.swift in Sources */,
 				EFCF210027B4FF1700427696 /* ViewControllerPreviewProvider.swift in Sources */,
 				EFCF210627B5F29100427696 /* ViewControllerProvider.swift in Sources */,
 				EFA0D62B27B2733700E7BC8C /* ConcentricCircleStyleButton.swift in Sources */,
 				EFCF210427B5F24000427696 /* ViewRepresentable.swift in Sources */,
+				EF6F2C0727E47CCE00F528BF /* NeonSignButtonStyle.swift in Sources */,
 				EFA0D63227B3AB6D00E7BC8C /* TimeDeviceMaterial .swift in Sources */,
+				EF6F2C0427E4599E00F528BF /* NeonSignViewController.swift in Sources */,
 				EFA0D63427B3AB9500E7BC8C /* TimeDeviceDateFormater.swift in Sources */,
 				EFD432CD27B0EB4800A40393 /* StopWatchMaterial.swift in Sources */,
 				EFA0D62E27B3813400E7BC8C /* TimeDeviceButtonStyle.swift in Sources */,
