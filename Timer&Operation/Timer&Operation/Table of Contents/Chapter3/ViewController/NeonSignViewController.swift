@@ -14,6 +14,7 @@ class NeonSignViewController: UIViewController {
     private let firstBtn: UIButton = UIButton()
     private let secondBtn: UIButton = UIButton()
     private let thirdBtn: UIButton = UIButton()
+    private let resetBtn: UIButton = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +66,29 @@ class NeonSignViewController: UIViewController {
         NeonSignMaterial.FirstButton.setButton(firstBtn)
         NeonSignMaterial.SecondButton.setButton(secondBtn)
         NeonSignMaterial.ThirdButton.setButton(thirdBtn)
+        
+        let bottomGride = UILayoutGuide()
+        view.addLayoutGuide(bottomGride)
+        NSLayoutConstraint.activate([
+            bottomGride.topAnchor.constraint(equalTo: stackView.bottomAnchor),
+            bottomGride.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            bottomGride.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            bottomGride.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
+        
+        view.addSubview(resetBtn)
+        resetBtn.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            resetBtn.heightAnchor.constraint(equalToConstant: 80),
+            resetBtn.widthAnchor.constraint(equalToConstant: 80),
+            resetBtn.centerXAnchor.constraint(equalTo: bottomGride.centerXAnchor),
+            resetBtn.centerYAnchor.constraint(equalTo: bottomGride.centerYAnchor)
+        ])
+        
+        resetBtn.setTitle("重置", for: .normal)
+        resetBtn.setTitle("重置", for: .highlighted)
+        resetBtn.setTitleColor(.white, for: .normal)
+        resetBtn.setTitleColor(.systemGray, for: .highlighted)
     }
     
     
@@ -73,11 +97,9 @@ class NeonSignViewController: UIViewController {
 
 
 
-
-
-
 struct  NeonSignViewController_Preview: PreviewProvider {
     static var previews: some View {
         return ViewControllerProvider.init(NeonSignViewController())
+            .ignoresSafeArea()
     }
 }
