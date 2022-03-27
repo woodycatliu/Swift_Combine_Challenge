@@ -11,7 +11,7 @@ class TabBarController: UITabBarController {
     typealias TabBarType = TabBarSubViewControllerType
     typealias Layer = CAShapeLayer
     
-    let subViewControllersTypes: [TabBarType] = [.c1, .c2]
+    let subViewControllersTypes: [TabBarType] = [.c1, .c2, .c3]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,7 @@ class TabBarController: UITabBarController {
     fileprivate func appearanceTabarColor() {
         if #available(iOS 15, *) {
             let appearance = UITabBarAppearance()
-                        
+            
             appearance.configureWithOpaqueBackground()
             
             appearance.compactInlineLayoutAppearance.selected.iconColor = TabBarType.highlightlyTinted
@@ -39,37 +39,37 @@ class TabBarController: UITabBarController {
             
             appearance.compactInlineLayoutAppearance.normal.iconColor = TabBarType.normalTinted
             appearance.compactInlineLayoutAppearance.normal.titleTextAttributes = [.foregroundColor: TabBarType.normalTinted]
-
+            
             
             
             appearance.inlineLayoutAppearance.selected.iconColor = TabBarType.highlightlyTinted
             appearance.inlineLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor.clear]
-
+            
             
             
             appearance.inlineLayoutAppearance.normal.iconColor = TabBarType.normalTinted
             appearance.inlineLayoutAppearance.normal.titleTextAttributes = [.foregroundColor: TabBarType.normalTinted]
-
+            
             
             appearance.stackedLayoutAppearance.selected.iconColor = TabBarType.highlightlyTinted
             appearance.stackedLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor.clear]
-
+            
             
             appearance.stackedLayoutAppearance.normal.iconColor = TabBarType.normalTinted
             appearance.stackedLayoutAppearance.normal.titleTextAttributes = [.foregroundColor: TabBarType.normalTinted]
-
+            
             
             appearance.backgroundColor = .black.withAlphaComponent(0.9)
             
             tabBar.standardAppearance = appearance
             tabBar.scrollEdgeAppearance = appearance
-        
+            
             return
         }
         
         tabBar.unselectedItemTintColor = TabBarType.normalTinted
         tabBar.tintColor = TabBarType.highlightlyTinted
-
+        
     }
     
     fileprivate func configureViewController(_ type: TabBarType)-> UIViewController {
@@ -84,13 +84,16 @@ class TabBarController: UITabBarController {
 }
 
 enum TabBarSubViewControllerType: Int, CaseIterable {
-    case c1, c2
+    case c1, c2, c3
     var viewController: UIViewController {
         switch self {
         case .c1:
             return navigationControllerSetting(StopWatchSubClassViewController())
         case .c2:
             return navigationControllerSetting(TimingDeviceSubViewController())
+            
+        case .c3:
+            return navigationControllerSetting(NeonSignImplementViewController())
         }
     }
     
@@ -100,6 +103,8 @@ enum TabBarSubViewControllerType: Int, CaseIterable {
             return .chapter1
         case .c2:
             return .chapter2
+        case .c3:
+            return .chapter3
         }
     }
     static let highlightlyTinted: UIColor = .white
@@ -124,6 +129,8 @@ extension TabBarSubViewControllerType.BarItemStyle {
     static let chapter1: Self = .init(title: "ch1", normalImage: .init(systemName: "clock.arrow.2.circlepath")?.withTintColor(.systemGray2), highlightlyImage: .init(systemName: "clock.arrow.2.circlepath")?.imgWithNewSize(size: .init(width: 38, height: 33)))
     
     static let chapter2: Self = .init(title: "ch2", normalImage: .init(systemName: "cursorarrow.click.badge.clock")?.withTintColor(.systemGray2), highlightlyImage: .init(systemName: "cursorarrow.click.badge.clock")?.imgWithNewSize(size: .init(width: 38, height: 38)))
+    
+    static let chapter3: Self = .init(title: "ch2", normalImage: .init(systemName: "light.min")?.withTintColor(.systemGray2), highlightlyImage: .init(systemName: "light.min")?.imgWithNewSize(size: .init(width: 38, height: 38)))
 }
 
 

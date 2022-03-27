@@ -10,11 +10,11 @@ import UIKit
 import SwiftUI
 
 class NeonSignViewController: UIViewController {
-    private let totalLabel: UILabel = UILabel()
-    private let firstBtn: UIButton = UIButton()
-    private let secondBtn: UIButton = UIButton()
-    private let thirdBtn: UIButton = UIButton()
-    private let resetBtn: UIButton = UIButton()
+    let totalLabel: UILabel = UILabel()
+    let firstBtn: UIButton = UIButton()
+    let secondBtn: UIButton = UIButton()
+    let thirdBtn: UIButton = UIButton()
+    let resetBtn: UIButton = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()

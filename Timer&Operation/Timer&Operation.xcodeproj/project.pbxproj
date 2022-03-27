@@ -14,6 +14,12 @@
 		5BBD51AF27B8B1700002B93A /* TimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBD51AE27B8B1700002B93A /* TimeIntervalExtension.swift */; };
 		5BBD51B127B8B5110002B93A /* StopWatchSubClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBD51B027B8B5110002B93A /* StopWatchSubClassViewController.swift */; };
 		5BBD51B327B8BF8C0002B93A /* StopWatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBD51B227B8BF8C0002B93A /* StopWatchModel.swift */; };
+		5BC560B427EF5D4D00D6A39C /* NeonSignImplementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC560B327EF5D4D00D6A39C /* NeonSignImplementViewController.swift */; };
+		5BC560B627EF60BD00D6A39C /* ReduxComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC560B527EF60BD00D6A39C /* ReduxComponents.swift */; };
+		5BC560B827EF6ED200D6A39C /* NeonSignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC560B727EF6ED200D6A39C /* NeonSignViewModel.swift */; };
+		5BC560BA27EF6F9300D6A39C /* NeonSignComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC560B927EF6F9300D6A39C /* NeonSignComponents.swift */; };
+		5BC560BC27EFB20B00D6A39C /* Effect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC560BB27EFB20B00D6A39C /* Effect.swift */; };
+		5BC560BE27EFB23E00D6A39C /* CancellableCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC560BD27EFB23E00D6A39C /* CancellableCollection.swift */; };
 		EF24A3EA27C7859B00D24CB2 /* TimingDeviceSubViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF24A3E927C7859B00D24CB2 /* TimingDeviceSubViewModel.swift */; };
 		EF24A3EC27C786A700D24CB2 /* TimingDeviceSubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF24A3EB27C786A700D24CB2 /* TimingDeviceSubViewController.swift */; };
 		EF24A3EE27C89BDE00D24CB2 /* TimerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF24A3ED27C89BDE00D24CB2 /* TimerExtension.swift */; };
@@ -84,6 +90,12 @@
 		5BBD51AE27B8B1700002B93A /* TimeIntervalExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtension.swift; sourceTree = "<group>"; };
 		5BBD51B027B8B5110002B93A /* StopWatchSubClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchSubClassViewController.swift; sourceTree = "<group>"; };
 		5BBD51B227B8BF8C0002B93A /* StopWatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchModel.swift; sourceTree = "<group>"; };
+		5BC560B327EF5D4D00D6A39C /* NeonSignImplementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeonSignImplementViewController.swift; sourceTree = "<group>"; };
+		5BC560B527EF60BD00D6A39C /* ReduxComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxComponents.swift; sourceTree = "<group>"; };
+		5BC560B727EF6ED200D6A39C /* NeonSignViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeonSignViewModel.swift; sourceTree = "<group>"; };
+		5BC560B927EF6F9300D6A39C /* NeonSignComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeonSignComponents.swift; sourceTree = "<group>"; };
+		5BC560BB27EFB20B00D6A39C /* Effect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Effect.swift; sourceTree = "<group>"; };
+		5BC560BD27EFB23E00D6A39C /* CancellableCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancellableCollection.swift; sourceTree = "<group>"; };
 		EF24A3E927C7859B00D24CB2 /* TimingDeviceSubViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimingDeviceSubViewModel.swift; sourceTree = "<group>"; };
 		EF24A3EB27C786A700D24CB2 /* TimingDeviceSubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimingDeviceSubViewController.swift; sourceTree = "<group>"; };
 		EF24A3ED27C89BDE00D24CB2 /* TimerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerExtension.swift; sourceTree = "<group>"; };
@@ -166,6 +178,19 @@
 				5BBD51B027B8B5110002B93A /* StopWatchSubClassViewController.swift */,
 			);
 			path = Chapter1;
+			sourceTree = "<group>";
+		};
+		5BC560B227EF5D0C00D6A39C /* Chapter3 */ = {
+			isa = PBXGroup;
+			children = (
+				5BC560BD27EFB23E00D6A39C /* CancellableCollection.swift */,
+				5BC560B527EF60BD00D6A39C /* ReduxComponents.swift */,
+				5BC560B927EF6F9300D6A39C /* NeonSignComponents.swift */,
+				5BC560B727EF6ED200D6A39C /* NeonSignViewModel.swift */,
+				5BC560B327EF5D4D00D6A39C /* NeonSignImplementViewController.swift */,
+				5BC560BB27EFB20B00D6A39C /* Effect.swift */,
+			);
+			path = Chapter3;
 			sourceTree = "<group>";
 		};
 		EF24A3E227C760CF00D24CB2 /* Chapter2 */ = {
@@ -404,6 +429,7 @@
 			isa = PBXGroup;
 			children = (
 				EFD432D627B1035C00A40393 /* Implement_ReadMe.md */,
+				5BC560B227EF5D0C00D6A39C /* Chapter3 */,
 				EF24A3E227C760CF00D24CB2 /* Chapter2 */,
 				5BBD51A927B8AC700002B93A /* Chapter1 */,
 			);
@@ -548,6 +574,7 @@
 			files = (
 				EFA0D62127B231AD00E7BC8C /* TimingDeviceViewController.swift in Sources */,
 				EFD432C427B0C77F00A40393 /* UIViewConstraintExtension.swift in Sources */,
+				5BC560BA27EF6F9300D6A39C /* NeonSignComponents.swift in Sources */,
 				5BBD51AF27B8B1700002B93A /* TimeIntervalExtension.swift in Sources */,
 				EFCF210827B5F2B400427696 /* ViewControllerRepresentable.swift in Sources */,
 				EF24A3EE27C89BDE00D24CB2 /* TimerExtension.swift in Sources */,
@@ -555,6 +582,7 @@
 				EFD4329027B0C2CD00A40393 /* ViewController.swift in Sources */,
 				EFD432C127B0C4B000A40393 /* TimestampView.swift in Sources */,
 				EFD432CB27B0E69600A40393 /* StopWatchDateFormater.swift in Sources */,
+				5BC560B627EF60BD00D6A39C /* ReduxComponents.swift in Sources */,
 				EFD4328C27B0C2CD00A40393 /* AppDelegate.swift in Sources */,
 				EFD432D127B0ED9F00A40393 /* ScreenExtension.swift in Sources */,
 				EFCF210227B5F21100427696 /* ViewProvider.swift in Sources */,
@@ -565,6 +593,7 @@
 				EFA0D62B27B2733700E7BC8C /* ConcentricCircleStyleButton.swift in Sources */,
 				EF24A3EC27C786A700D24CB2 /* TimingDeviceSubViewController.swift in Sources */,
 				EFCF210427B5F24000427696 /* ViewRepresentable.swift in Sources */,
+				5BC560B427EF5D4D00D6A39C /* NeonSignImplementViewController.swift in Sources */,
 				EF6F2C0727E47CCE00F528BF /* NeonSignButtonStyle.swift in Sources */,
 				EFA0D63227B3AB6D00E7BC8C /* TimeDeviceMaterial .swift in Sources */,
 				EF6F2C0427E4599E00F528BF /* NeonSignViewController.swift in Sources */,
@@ -575,13 +604,16 @@
 				EFA0D62827B26A7800E7BC8C /* UIImageExtension.swift in Sources */,
 				EFA0D62427B2344400E7BC8C /* TimePickViewModel.swift in Sources */,
 				EFD432CF27B0EBA600A40393 /* StopWatchButtonStyle.swift in Sources */,
+				5BC560BC27EFB20B00D6A39C /* Effect.swift in Sources */,
 				5BBD51A827B8A6BB0002B93A /* Logger.swift in Sources */,
+				5BC560BE27EFB23E00D6A39C /* CancellableCollection.swift in Sources */,
 				EF3AB41327B4DBDE00BE46D3 /* ViewPreviewProvider.swift in Sources */,
 				5BBD51B327B8BF8C0002B93A /* StopWatchModel.swift in Sources */,
 				EFA0D63027B3998400E7BC8C /* TimingCountdownView.swift in Sources */,
 				EFD432C827B0E5E900A40393 /* StopWatchViewController.swift in Sources */,
 				5BBD51B127B8B5110002B93A /* StopWatchSubClassViewController.swift in Sources */,
 				EFD4328E27B0C2CD00A40393 /* SceneDelegate.swift in Sources */,
+				5BC560B827EF6ED200D6A39C /* NeonSignViewModel.swift in Sources */,
 				5BBD51AD27B8B0BD0002B93A /* PublisherExtension.swift in Sources */,
 				EF24A3EA27C7859B00D24CB2 /* TimingDeviceSubViewModel.swift in Sources */,
 				EFCF210B27B5F31200427696 /* UIKitProviderLayout.swift in Sources */,
