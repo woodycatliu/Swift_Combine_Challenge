@@ -28,15 +28,17 @@ extension NeonSignImplementViewController {
             self?.thirdBtn.setTitle("\(state.third)", for: .normal)
         }
         
-        let updateTotalLabel: (Int)-> () = { [weak self] value in
+        let updateTotalLabel: (Int, Int, Int)-> () = { [weak self] first, second, third in
+            let value = first + second + third
             self?.totalLabel.text = "\(value)"
         }
         
-        let buttonShiny: (Int)-> () = { [weak self] value in
+        let buttonShiny: (Int, Int, Int)-> () = { [weak self] first, second, third in
             guard let self = self else { return }
-            let isMultiOf2 = value % 2 == 0 && value != 0
-            let isMultiOf3 = value % 3 == 0 && value != 0
-            let isMultiOf5 = value % 4 == 0 && value != 0
+            let value = first + second + third
+            let isMultiOf2 = value % 2 == 0 && first != 0
+            let isMultiOf3 = value % 3 == 0 && second != 0
+            let isMultiOf5 = value % 4 == 0 && third != 0
             
             NeonSignMaterial.FirstButton.setFlashColor(self.firstBtn, isFlash: isMultiOf2)
             NeonSignMaterial.SecondButton.setFlashColor(self.secondBtn, isFlash: isMultiOf3)
@@ -50,7 +52,7 @@ extension NeonSignImplementViewController {
             .store(in: &bag)
         
         let totalPublisher = viewModel.publisher
-            .map { return $0.first + $0.second + $0.third }
+            .map { return ($0.first, $0.second, $0.third) }
             .receive(on: RunLoop.main, options: nil)
             .share()
         

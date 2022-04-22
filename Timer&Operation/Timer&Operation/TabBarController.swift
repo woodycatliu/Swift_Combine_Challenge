@@ -17,6 +17,7 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         viewControllers = subViewControllersTypes.map { configureViewController($0) }
         appearanceTabarColor()
+        delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -82,6 +83,7 @@ class TabBarController: UITabBarController {
         return vc
     }
 }
+
 
 enum TabBarSubViewControllerType: Int, CaseIterable {
     case c1, c2, c3
